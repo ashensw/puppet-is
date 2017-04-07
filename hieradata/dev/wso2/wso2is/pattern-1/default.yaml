@@ -237,6 +237,14 @@ wso2::am_datasources:
     validation_query: "%{hiera('wso2::datasources::h2::validation_query')}"
     validation_interval: "%{hiera('wso2::datasources::common::validation_interval')}"
 
+wso2::analytics:
+  enable_DASLoginDataPublisher: false
+  enable_DASSessionDataPublisher: false
+  enable_AuthnDataPublisher: true
+  event_receiverURL: tcp://localhost:7612
+  username: admin
+  password: admin
+
 ## Uncomment the following AM data source and comment out the above H2 data source for a clustered setup
 #  wso2_am_db:
 #    name: WSO2AM_DB

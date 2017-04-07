@@ -200,6 +200,14 @@ wso2::am_datasources:
     validation_query: "%{hiera('wso2::datasources::mysql::validation_query')}"
     validation_interval: "%{hiera('wso2::datasources::common::validation_interval')}"
 
+wso2::analytics:
+  enable_DASLoginDataPublisher: false
+  enable_DASSessionDataPublisher: false
+  enable_AuthnDataPublisher: true
+  event_receiverURL: tcp://localhost:7612
+  username: admin
+  password: admin
+
 # Secure vault configuration
 #wso2::enable_secure_vault: true
 #wso2::secure_vault_configs:
